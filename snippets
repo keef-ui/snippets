@@ -1,1 +1,68 @@
 copy snippets here
+
+// Navbar.js
+import React, { useState, useEffect } from 'react';
+import './navbar.scss'; // Add your own styling
+
+const Navbar = () => {
+  const [isSticky, setIsSticky] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollPosition = window.scrollY;
+      setIsSticky(scrollPosition > 100); // Adjust the threshold as needed
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
+
+  return (
+    <header className={`navbar ${isSticky ? 'scrolled' : ''}`}>
+      <div className="logo">
+        {/* Your logo */}
+      </div>
+      <nav className="navigation">
+        {/* Your navigation links */}
+      </nav>
+    </header>
+  );
+};
+
+export default Navbar;
+
+
+-------------------------------------------- css -------------------------------------------------------------------
+
+// navbar.scss
+.navbar {
+  width: 100%;
+  min-height: 6vh;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #eee;
+  transition: all 0.7s ease-in;
+}
+
+.scrolled {
+  position: sticky;
+  top: 0;
+  left: 0;
+  background-color: lightblue;
+  z-index: 100; // Ensure it's above other content
+}
+
+.logo img {
+  width: 50px;
+}
+
+.navigation {
+  // Your navigation styles
+}
+
+
+-------------------------------------------------------
