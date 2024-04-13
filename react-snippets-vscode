@@ -1,0 +1,11 @@
+react snippets short code -- vscode
+
+
+react snippets - vscode -shortcuts
+ffc	Function Component
+imrc	Import React / Component
+imrse	Import React / useState useEffect
+sfc	Stateless Function Component (Arrow function)
+ucb	useCallback Hook
+uef	useEffect Hook
+usf	Declare a new state variable using State Hook
