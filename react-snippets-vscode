@@ -1,11 +1,12 @@
 react snippets short code -- vscode
 
 
-react snippets - vscode -shortcuts
-ffc	Function Component
-imrc	Import React / Component
-imrse	Import React / useState useEffect
-sfc	Stateless Function Component (Arrow function)
-ucb	useCallback Hook
-uef	useEffect Hook
-usf	Declare a new state variable using State Hook
+anfn→ 	(params) => { }
+nfn→ 	const functionName = (params) => { }
+imp→ 	import moduleName from 'module'
+imn→ 	import 'module'
+imd→ 	import { destructuredModule } from 'module'
+ime→ 	import * as alias from 'module'
+imrc→ 	import React, { Component } from 'react'
+
+rcc -- react function
